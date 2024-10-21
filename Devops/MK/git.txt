@@ -1,0 +1,23 @@
+git config --global user.name "Name"
+git config --global user.email "Email@address.com"
+git init/ clone
+git status
+make changes
+git add -A/ filename.txt
+git commit -m "commit message"
+git push
+git branch
+git branch demo
+git add -A
+git commit -m "Creating a new Branch"
+git push -u origin demo
+git merge demo main
+git branch
+git push origin --delete demo
+git log --oneline
+q
+git add git.txt
+git commit -m "added commands"
+git push 
+git config --global --unset user.name
+git config --global --unset user.email
