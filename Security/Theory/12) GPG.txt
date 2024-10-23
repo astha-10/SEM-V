@@ -1,0 +1,15 @@
+### GPG for Email Security:
+
+**GPG (GNU Privacy Guard)** is a tool for encrypting, decrypting, and signing emails to provide **confidentiality, integrity, and authenticity**. It uses **asymmetric encryption** with a public and private key pair.
+
+### Key Features:
+- **Encryption**: Encrypt emails using the recipient's public key to keep content private.
+- **Digital Signatures**: Sign emails with your private key to verify your identity and ensure the message hasn’t been altered.
+
+### Basic Steps:
+1. **Generate keys**: Create a key pair using `gpg --gen-key`.
+2. **Share public key**: Send or publish your public key.
+3. **Encrypt**: Use `gpg -e -r [recipient]` to encrypt the email.
+4. **Sign**: Sign with `gpg --sign`.
+
+GPG ensures secure and authenticated email communication.

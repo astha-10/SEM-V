@@ -1,0 +1,15 @@
+Vignere Cipher:
+The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It uses a keyword (or keyphrase) to determine the shift value for each letter in the plaintext. The keyword is repeated as necessary to match the length of the plaintext. In the Vigenère cipher, you use a keyword (or keyphrase) to determine the shift value for each letter in your plaintext. First, choose a keyword that you'll repeat to match the length of your plaintext.
+
+For example, let's say your keyword is "KEY" and your plaintext is "HELLO" (all in uppercase).
+>Keyword: "KEYKEY" (repeating the keyword to match the length of the plaintext).
+>Plaintext: "HELLO."
+>Next, refer to the Vigenère Table (or Vigenère Square).
+
+
+Encrypt your plaintext:
+● Match each letter of your plaintext with the corresponding letter of your keyword (H
+-> K, E -> E, L -> Y, L -> K, O -> E).
+● Find the corresponding letter in the Vigenère table at the intersection of the row and
+column of the matching letters.
+● Your encrypted ciphertext is "KYKYE."

@@ -1,0 +1,24 @@
+AES (Advanced Encryption Standard) is a symmetric-key encryption algorithm, meaning the same
+key is used for both encryption and decryption. It's a widely adopted encryption standard for securing sensitive data and is known for its efficiency and security.
+1. Type of Cipher: AES is a block cipher, which means it encrypts data in fixed-size blocks
+(128 bits or 16 bytes) rather than one bit at a time.
+2. Number of Rounds: The number of rounds in AES depends on the key size. For AES-128,
+there are 10 rounds; for AES-192, there are 12 rounds; and for AES-256, there are 14 rounds.
+Each round involves a series of operations.
+3. Key Size: AES supports key sizes of 128, 192, or 256 bits. The key size determines the
+security level, with longer keys providing stronger encryption.
+4. Block Size: AES operates on data blocks of 128 bits (16 bytes). This block size remains fixed regardless of the key size.
+5. Operations in Each Round: In each round of AES, several operations are performed on the
+data, including: SubBytes, ShiftRows, MixColumns, AddRoundKey
+
+Several modes:
+1) ECB Mode (Electronic Codebook Mode)
+In ECB mode, each block of plaintext is encrypted independently with the same encryption key. This means that identical blocks of plaintext will result in identical blocks of ciphertext, which can be a security vulnerability.
+
+2) In CBC mode, each block of plaintext is XORed with the previous ciphertext block before encryption. This "chaining" of blocks adds complexity and ensures that identical plaintext blocks do not produce identical ciphertext blocks.
+
+3) OFB Mode (Output Feedback Mode):
+OFB mode converts the block cipher into a stream cipher. It generates a stream of pseudo-random bits using an initialization vector (IV) and the encryption key. This stream is then XORed with the plaintext to produce ciphertext.
+
+4) Counter Mode (CTR Mode):
+Counter mode also converts the block cipher into a stream cipher. It uses a counter value as an IV, which is incremented for each block. The counter value is encrypted to produce a keystream, which is then XORed with the plaintext.

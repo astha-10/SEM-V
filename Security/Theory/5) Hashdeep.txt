@@ -1,0 +1,38 @@
+Hashdeep is a command-line tool in Kali Linux used for computing and verifying file hash values, such as MD5, SHA-1, SHA-256, etc. It calculates hashes for files and directories and can create hash databases for later comparison. Hashdeep supports recursive hashing, making it useful for validating file integrity over time. It's commonly used for digital forensics, data verification, and ensuring file authenticity in security assessments.
+1. Check Hashdeep Version: `hashdeep -V`
+2. Display Help: `hashdeep -h` or `hashdeep -hh`
+3. Manual Page: `man hashdeep`
+4. Manual Page for Specific Algorithm: `man md5deep`
+5. Hash a File: `hashdeep filename`
+6. Hash with Hidden Paths: `hashdeep -b filename`
+7. Suppress Errors: `hashdeep -s filename`
+8. Multiple Hash Algorithms: `hashdeep -c md5,sha1,sha256,tiger filename`
+9. Hash Multiple Files (MD5): `hashdeep -c md5 *.txt`
+10. Hash Multiple Files (MD5 & SHA-1): `hashdeep -c md5,sha1 *.txt`
+11. Hashing Block of Files: `hashdeep -c md5 -p 100 example.txt`
+12. Recursive Hashing: `hashdeep -c md5 -r /home/user/myfiles`
+13. Redirect Output: `md5deep *.txt > hashset.txt`
+14. Matching Mode Output: `md5deep -m hashset.txt *`
+15. Suppress System Messages: `md5deep -s -m hashset.txt *`
+16. Display Negatively Matching Files: `md5deep -s -x hashset.txt *`
+
+Forensic auditing can be done using hashdeep tool which means a check to determine if any files in the system are changed due to malware or any normal system operation like update patching.
+
+17. Create Hashset and Audit:
+- Create Hashset: `hashdeep -c md5,sha1,sha256 -r /home/user/myfiles > hashset1.txt`
+- Audit Files: `hashdeep -a -r -k hashset1.txt /home/user/myfiles`
+18. Audit with New File (Fails):
+- Create New File: `touch /home/user/myfiles/newfile.txt`
+- Audit Again: `hashdeep -a -r -k hashset1.txt /home/user/myfiles`
+19. Check Failed Points (Verbose):
+- Audit with Verbose: `hashdeep -v -a -r -k hashset1.txt /home/user/myfiles`
+20. Audit After Moving File:
+- Move File: `mv /home/user/myfiles/example.txt /tmp`
+- Audit Again: `hashdeep -v -a -r -k hashset1.txt /home/user/myfiles`
+21. Audit After Renaming File:
+- Rename File: `mv /home/user/myfiles/shreya.txt /home/user/myfiles/backup.txt`
+- Audit Again: `hashdeep -v -a -r -k hashset1.txt /home/user/myfiles`
+22. Verbose Audit Output:
+- More Verbose: `hashdeep -vv -a -r -k hashset1.txt /home/user/myfiles`
+- Very Verbose: `hashdeep -vvv -a -r -k hashset1.txt /home/user/myfiles`
+Note: Replace the paths and filenames with actual directory and file names as needed.

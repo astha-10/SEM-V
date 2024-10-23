@@ -1,0 +1,11 @@
+Playfair Cipher:
+The Playfair cipher is a digraphic substitution cipher used to encrypt plaintext. It operates on pairs of letters (digraphs) instead of individual letters, making it more secure than simple substitution ciphers. The cipher uses a 5x5 matrix (Playfair square) of letters, typically excluding "J," to create the encryption key.
+>Encryption Rules:
+  - If letters are in the same row, replace each with the letter to its right.
+  - If in the same column, replace each with the letter below.
+  - If neither, replace them with the opposite corners of the rectangle they form.
+
+### Vigenère Cipher:
+The **Vigenère Cipher** is a polyalphabetic substitution cipher that encrypts text using a repeating key. 
+
+- **Encryption**: Each letter in the plaintext is shifted by the value of the corresponding key letter using a repeating key. For example, if the plaintext is “HELLO” and the key is “KEY,” the encrypted text is **“RIJVS”**.

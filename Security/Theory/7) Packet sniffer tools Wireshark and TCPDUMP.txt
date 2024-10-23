@@ -1,0 +1,24 @@
+
+
+
+
+### tcpdump:
+**tcpdump** is a command-line network packet analyzer used to capture and analyze network traffic in real time. It intercepts and logs the packets that are transmitted or received over a network, allowing users to filter and inspect specific types of traffic.
+
+- **Purpose**: Primarily used for network troubleshooting and security analysis.
+- **Features**: 
+  - Lightweight and efficient.
+  - Supports filtering using expressions to capture specific packets (e.g., by IP, port, protocol).
+  - Can save packet captures to files for later analysis.
+
+
+### Wireshark:
+**Wireshark** is a graphical network protocol analyzer that provides detailed packet analysis. It captures live traffic or reads saved packet captures, displaying the data in a user-friendly interface.
+
+- **Purpose**: Used for in-depth network troubleshooting, protocol analysis, and security reviews.
+- **Features**:
+  - Intuitive graphical interface with color-coded packets for easy identification.
+  - Provides deep inspection of hundreds of protocols.
+  - Allows filtering, searching, and exporting captured data for analysis.
+
+While **tcpdump** is ideal for quick and efficient command-line captures, **Wireshark** offers a more comprehensive and visual analysis of network traffic.

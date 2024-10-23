@@ -1,0 +1,14 @@
+### Simulation of DoS Attack using Hping3:
+
+**Hping3** is a powerful command-line network tool used for testing and diagnosing network protocols. It can also be used to simulate various network attacks, including **Denial of Service (DoS)** attacks, by sending a large number of packets to a target.
+
+**DoS Attack**:
+A **DoS (Denial of Service) attack** is an attempt to make a system or network resource unavailable to its intended users by overwhelming it with excessive traffic or sending malicious requests.
+
+**Hping3 for DoS Simulation**:
+- **Purpose**: Hping3 can simulate DoS attacks by generating and sending numerous TCP, UDP, or ICMP packets to flood a target server or network, thus exhausting its resources.
+- **Common Usage**:
+  - **TCP SYN Flood**: Sending multiple SYN packets to the target to overwhelm it. 
+  - **ICMP Flood**: Sending a flood of ICMP echo requests (ping).
+
+These simulations help in understanding and testing how a network or system can handle such traffic loads and preparing defenses against actual attacks.

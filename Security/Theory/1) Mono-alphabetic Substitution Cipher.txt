@@ -1,0 +1,13 @@
+Mono-alphabetic Substitution Cipher:
+A mono-alphabetic substitution cipher is a type of substitution cipher where each letter in the plaintext is replaced by a corresponding letter in the ciphertext using a fixed mapping or key. Unlike polyalphabetic ciphers, which use multiple substitution alphabets, mono-alphabetic ciphers rely on a single substitution alphabet for encryption.
+
+Substitution Alphabet: 
+	In a mono-alphabetic cipher, each letter of the plaintext alphabet is mapped to a unique letter in the ciphertext alphabet. For example, if 'A' is 
+mapped to 'D', then every occurrence of 'A' in the plaintext will be replaced by 'D' in the ciphertext. 
+
+Key:
+	The key in a mono-alphabetic cipher is the substitution alphabet itself. This can be represented as a sequence of 26 letters that shows the mapping from plaintext to ciphertext letters. 
+
+Encryption and Decryption: 
+	o Encryption: To encrypt a message, replace each letter in the plaintext with the corresponding letter in the ciphertext alphabet based on the key. 
+	o Decryption: To decrypt a message, replace each letter in the ciphertext with the corresponding letter in the plaintext alphabet based on the inverse of the key.

@@ -1,0 +1,14 @@
+Shift Cipher:
+A Shift Cipher, also known as the Caesar Cipher, is one of the simplest and most well known encryption techniques. It is a type of substitution cipher where each letter in the 
+plaintext is shifted by a fixed number of positions down or up the alphabet.
+
+Encryption process:
+	>>Key: The key for a Shift Cipher is a number that indicates how many positions each letter in the plaintext should be shifted. For example, a shift of 3 means 'A' becomes 'D', 'B' becomes 'E', and so on. 
+	>>Plaintext to Ciphertext: To encrypt a message, each letter of the plaintext is replaced by the letter that is a fixed number of positions further down the alphabet. If the shift takes the letter past 'Z', it wraps around to the beginning of the alphabet. 
+
+Decryption Process:
+To decrypt, the reverse operation is performed. Each letter of the 
+ciphertext is shifted back by the same key
+
+
+

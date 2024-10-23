@@ -1,0 +1,37 @@
+NMAP: OS fingerprinting, ping scan, TCP port scan, UDP port scan
+
+
+
+
+### Nmap:
+**Nmap (Network Mapper)** is a popular open-source network scanning tool used to discover hosts, open ports, and services on a network. It is also capable of gathering information about the operating system, detecting vulnerabilities, and performing detailed security assessments.
+
+### Key Nmap Scanning Options:
+
+1. **Open Port Scanning**:
+   - **Purpose**: Identifies open TCP/UDP ports on target hosts.
+   - **Command**: `nmap -p [port range] [target]`
+   - **Example**: `nmap -p 1-1000 192.168.1.1` scans ports 1 to 1000.
+
+2. **OS Fingerprinting**:
+   - **Purpose**: Determines the operating system running on a target machine.
+   - **Command**: `nmap -O [target]`
+   - **Example**: `nmap -O 192.168.1.1` attempts to detect the OS on the target.
+
+3. **Ping Scan**:
+   - **Purpose**: Discovers active hosts in a network without scanning open ports.
+   - **Command**: `nmap -sn [target range]`
+   - **Example**: `nmap -sn 192.168.1.0/24` lists active hosts in the network.
+
+4. **TCP Port Scan**:
+   - **Purpose**: Scans for open TCP ports using different techniques like SYN scan or Connect scan.
+   - **Command**: 
+     - **SYN Scan**: `nmap -sS [target]` (stealth scan)
+     - **Connect Scan**: `nmap -sT [target]` (establishes full TCP connection)
+
+5. **UDP Port Scan**:
+   - **Purpose**: Scans for open UDP ports, which is slower and less reliable than TCP scanning.
+   - **Command**: `nmap -sU [target]`
+   - **Example**: `nmap -sU 192.168.1.1` scans for open UDP ports.
+
+Nmap’s flexibility and detailed reporting make it a key tool in network exploration, security auditing, and vulnerability assessment.

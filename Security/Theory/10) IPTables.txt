@@ -1,0 +1,32 @@
+### Firewalls and IP Tables:
+
+A **firewall** is a network security device or software that monitors and controls incoming and outgoing network traffic based on predefined security rules. It acts as a barrier between trusted internal networks and untrusted external networks, protecting systems from unauthorized access and attacks.
+
+### IPTables:
+**IPTables** is a command-line firewall utility in **Linux** that allows administrators to configure and manage firewall rules. It works with the **netfilter** framework in the Linux kernel, filtering network traffic based on rules defined for **chains** and **tables**.
+
+**Key Components of IPTables**:
+1. **Tables**: Define the types of operations:
+   - **Filter**: For basic packet filtering (default table).
+   - **NAT (Network Address Translation)**: For modifying packet source/destination addresses.
+   - **Mangle**: For altering packet headers.
+
+2. **Chains**: A set of rules that define the actions on packets:
+   - **INPUT**: Handles incoming packets.
+   - **OUTPUT**: Handles outgoing packets.
+   - **FORWARD**: Handles packets routed through the server.
+
+3. **Rules**: Define actions like **ACCEPT**, **DROP**, **REJECT**, or **LOG** based on conditions like source IP, destination IP, ports, or protocols.
+
+**Example**:
+- **Allow incoming HTTP traffic**: 
+  ```bash
+  iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+  ```
+- **Block all incoming traffic except SSH**:
+  ```bash
+  iptables -P INPUT DROP
+  iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+  ```
+
+**IPTables** offers fine-grained control over network traffic, making it a powerful tool for configuring firewalls on Linux servers.
