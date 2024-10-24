@@ -1,0 +1,88 @@
+Importing a Module:
+const fs = require('fs');
+
+------------------------------------
+Reading (async method):
+fs.readFile('filename.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+
+Reading (sync method):
+const data = fs.readFileSync('filename.txt', 'utf8');
+console.log(data);
+------------------------------------
+
+Writing to a file (async):
+fs.writeFile('filename.txt', 'Hello World!', (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('File has been written');
+});
+
+
+Writing to a file (sync):
+fs.writeFileSync('filename.txt', 'Hello World!');
+console.log('File has been written');
+------------------------------------
+
+Appending data to file (async):
+fs.appendFile('filename.txt', 'Appended text', (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('Data has been appended');
+});
+
+
+Appending data to file (sync):
+fs.appendFileSync('filename.txt', 'Appended text');
+console.log('Data has been appended');
+------------------------------------
+
+Deleting a file (async):
+fs.unlink('filename.txt', (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('File has been deleted');
+});
+
+
+Deleting a file (sync):
+fs.unlinkSync('filename.txt');
+console.log('File has been deleted');
+------------------------------------
+
+Renaming a file (async):
+fs.rename('oldname.txt', 'newname.txt', (err) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log('File has been renamed');
+});
+
+Renaming a file (sync):
+fs.renameSync('oldname.txt', 'newname.txt');
+console.log('File has been renamed');
+-------------------------------------
+
+Checking existence of a file:
+if (fs.existsSync('filename.txt')) {
+  console.log('File exists');
+} else {
+  console.log('File does not exist');
+}
+
+
+
+
+

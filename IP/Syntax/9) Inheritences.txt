@@ -1,0 +1,154 @@
+1) Single inheritance (using class):
+// Parent Class
+class Parent {
+  constructor() {
+    this.parentProperty = 'This is a parent property';
+  }
+
+  parentMethod() {
+    console.log('This is a parent method');
+  }
+}
+
+// Child Class inherits from Parent Class
+class Child extends Parent {
+  constructor() {
+    super(); // Call the constructor of the parent class
+    this.childProperty = 'This is a child property';
+  }
+
+  childMethod() {
+    console.log('This is a child method');
+  }
+}
+
+const childInstance = new Child();
+childInstance.parentMethod(); // Inherited from Parent
+childInstance.childMethod();  // Defined in Child
+
+----------------------------------------------------
+2) Multilevel inheritence (using class):
+// Grandparent Class
+class Grandparent {
+  constructor() {
+    this.grandparentProperty = 'This is a grandparent property';
+  }
+}
+
+// Parent Class inherits from Grandparent Class
+class Parent extends Grandparent {
+  constructor() {
+    super(); // Call the constructor of Grandparent class
+    this.parentProperty = 'This is a parent property';
+  }
+}
+
+// Child Class inherits from Parent Class
+class Child extends Parent {
+  constructor() {
+    super(); // Call the constructor of Parent class
+    this.childProperty = 'This is a child property';
+  }
+}
+
+const childInstance = new Child();
+console.log(childInstance.grandparentProperty); // Access property from Grandparent
+
+----------------------------------------------------
+3) Hierarchial inheritance (using class):
+// Parent Class
+class Parent {
+  constructor() {
+    this.parentProperty = 'This is a parent property';
+  }
+}
+
+// ChildOne Class inherits from Parent Class
+class ChildOne extends Parent {
+  constructor() {
+    super(); // Call the constructor of Parent class
+    this.childOneProperty = 'This is a ChildOne property';
+  }
+}
+
+// ChildTwo Class inherits from Parent Class
+class ChildTwo extends Parent {
+  constructor() {
+    super(); // Call the constructor of Parent class
+    this.childTwoProperty = 'This is a ChildTwo property';
+  }
+}
+
+const childOneInstance = new ChildOne();
+const childTwoInstance = new ChildTwo();
+console.log(childOneInstance.parentProperty); // Access property from Parent
+console.log(childTwoInstance.parentProperty); // Access property from Parent
+
+----------------------------------------------------
+4) Multiple Inheritence (using mixins)
+// Define mixin objects
+const CanEat = {
+  eat() {
+    console.log('Eating...');
+  }
+};
+
+const CanWalk = {
+  walk() {
+    console.log('Walking...');
+  }
+};
+
+// Parent Class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// Child Class
+class Human extends Animal {}
+
+// Use Object.assign to add mixin behavior
+Object.assign(Human.prototype, CanEat, CanWalk);
+
+const humanInstance = new Human('John');
+humanInstance.eat();  // Inherited from CanEat mixin
+humanInstance.walk(); // Inherited from CanWalk mixin
+
+----------------------------------------------------
+5) Hybrid Inheritence:
+// Define mixin objects
+const CanRun = {
+  run() {
+    console.log('Running...');
+  }
+};
+
+const CanSwim = {
+  swim() {
+    console.log('Swimming...');
+  }
+};
+
+// Parent Class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+// Child classes that inherit from the parent
+class Dog extends Animal {}
+class Fish extends Animal {}
+
+// Add mixin behaviors
+Object.assign(Dog.prototype, CanRun);
+Object.assign(Fish.prototype, CanSwim);
+
+const dogInstance = new Dog('Rover');
+dogInstance.run(); // Inherited from CanRun mixin
+
+const fishInstance = new Fish('Nemo');
+fishInstance.swim(); // Inherited from CanSwim mixin
+

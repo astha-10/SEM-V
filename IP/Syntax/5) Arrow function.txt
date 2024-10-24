@@ -1,0 +1,27 @@
+Basic Syntax:
+const functionName = (parameters) => {
+  // Function body
+  return expression;
+};
+
+
+Examples:
+1) Without parameters:
+const greet = () => console.log("Hello!");
+greet(); // Output: Hello!
+
+2) With a single parameter:
+const square = (num) => num * num;
+console.log(square(5)); // Output: 25
+
+3) With multiple parameters:
+const add = (a, b) => a + b;
+console.log(add(3, 4)); // Output: 7
+
+4)Single line arrow function
+const multiply = (x, y) => x * y;
+
+console.log(multiply(2, 3)); // Output: 6
+const multiply = (x, y) => x * y;
+
+console.log(multiply(2, 3)); // Output: 6

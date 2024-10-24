@@ -1,0 +1,80 @@
+/* Container and Page Layout */
+body {
+    background-color: rgb(245, 247, 250); /* RGB Color Mode */
+    font-family: 'Poppins', sans-serif; /* Typography */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #5A20CB; /* Hex Color Mode */
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Transition Effect */
+.transition-text {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: hsl(340, 90%, 55%); /* HSV/ HSL Color Mode */
+    transition: color 0.5s ease;
+}
+
+.transition-text:hover {
+    color: rgb(75, 192, 192);
+}
+
+/* Button with Translate Effect */
+.translate-button {
+    padding: 12px 20px;
+    background-color: #00B894;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.translate-button:active {
+    transform: translateY(10px);
+}
+
+/* Animated Box */
+.animation-box {
+    width: 150px;
+    height: 150px;
+    background-color: #FC427B;
+    margin-top: 40px;
+    animation: rotateBox 4s infinite;
+}
+
+/* Keyframes for Animation */
+@keyframes rotateBox {
+    0% {
+        transform: rotate(0deg);
+        background-color: rgb(252, 66, 123);
+    }
+    50% {
+        transform: rotate(180deg);
+        background-color: #5F27CD;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: #FC427B;
+    }
+}

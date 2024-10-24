@@ -1,0 +1,20 @@
+1. Selecting Elements:
+> select element by its id: 
+let element = document.getElementById('myId');
+
+> Selects elements by their class name:
+let elements = document.getElementsByClassName('myClass');
+
+>Selects elements by their tag name:
+let elements = document.getElementsByTagName('div');
+
+>Selects the first element that matches a CSS selector:
+let element = document.querySelector('.myClass');
+
+2. Modifying Content:
+>Changes or gets the inner HTML content of an element:
+element.innerHTML = '<h1>Hello, World!</h1>';
+
+>Changes or gets the plain text inside an element:
+element.textContent = 'Hello, World!';
+

@@ -1,0 +1,59 @@
+Iterator:
+function createIterator(array) {
+    let index = 0;
+
+    return {
+        next: function() {
+            if (index < array.length) {
+                return { value: array[index++], done: false };
+            } else {
+                return { done: true };
+            }
+        }
+    };
+}
+
+const iterator = createIterator([1, 2, 3]);
+
+console.log(iterator.next()); // { value: 1, done: false }
+console.log(iterator.next()); // { value: 2, done: false }
+console.log(iterator.next()); // { value: 3, done: false }
+console.log(iterator.next()); // { done: true }
+-------------------------------------------------
+
+Generator:
+function* createGenerator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const generator = createGenerator();
+
+console.log(generator.next()); // { value: 1, done: false }
+console.log(generator.next()); // { value: 2, done: false }
+console.log(generator.next()); // { value: 3, done: false }
+console.log(generator.next()); // { done: true }
+-------------------------------------------------
+
+Inheritence:
+function Parent() {
+    this.parentProperty = 'I am a parent';
+}
+
+Parent.prototype.sayHello = function() {
+    console.log('Hello from Parent');
+};
+
+function Child() {
+    Parent.call(this); // Call parent constructor
+    this.childProperty = 'I am a child';
+}
+
+// Inherit from Parent
+Child.prototype = Object.create(Parent.prototype);
+Child.prototype.constructor = Child;
+
+const child = new Child();
+console.log(child.parentProperty); // 'I am a parent'
+child.sayHello(); // 'Hello from Parent'
